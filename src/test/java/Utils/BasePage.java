@@ -194,7 +194,7 @@ public class BasePage {
         Common.printCurrentTime("Ending Time");
         getDriver().manage().deleteAllCookies();
         //getDriver().quit();
-        //driver.remove();
+        driver.remove();
     }
 
     public void makeScreenshot(WebDriver driver, String screenshotName) {

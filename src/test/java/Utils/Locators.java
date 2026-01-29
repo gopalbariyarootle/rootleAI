@@ -22,6 +22,7 @@ public class Locators extends BasePage {
     public static String loginBtn = "//span[text()=' LOGIN ']";
     public static String errorMsgForEmail = "//mat-error[text()=' Please enter email address ']";
     public static String errorMsgForPassword = "//mat-error[text()=' Please enter password ']";
+    public static String errorMsgForInvalidEmail = "//mat-error[text()=' Please enter valid email address ']";
     public static String loginHeader = "//h3[text()='Login']";
     public static String matIconOnPassword = "//mat-icon[text()=' visibility ']";
     public static String forgotPasswordLink = "//a[text()='Forgot Your Password?']";
@@ -33,6 +34,34 @@ public class Locators extends BasePage {
     public static String facebookLogo = "//app-facebook-login/parent::span";
     public static String needAnAccountText = "//span[text()='Need an account?']";
     public static String signUpLink = "//a[text()='Sign Up']";
+
+    /*---------- Forgot password page Xpath ------------*/
+    public static String forgotPasswordHed = "//h3[text()='Forgot Password']";
+    public static String forgotPassText = "//span[@class='forgot-password-text']";
+    public static String submitButton = "//span[text()='Submit']/parent::button";
+    public static String backToText = "//span[text()='Back to ']";
+    public static String loginLikeOnForgotPassPage= "//a[text()='Login']";
+
+    /*---------- SignUp page Xpath ------------*/
+    public static String signUpHead = "//h3[text()='Sign Up']";
+    public static String orgNameInp = "//input[@placeholder='Enter Organization Name']";
+    public static String firstNameInp = "//input[@placeholder='Enter First Name']";
+    public static String lastNameInp= "//input[@placeholder='Enter Last Name']";
+    public static String phoneInp = "//input[@id='phone']";
+    public static String passwordInp = "//input[@id='mat-input-4']";
+    public static String confirmPassInp = "//input[@id='mat-input-5']";
+    public static String websiteInp = "//input[@placeholder='Enter Website']";
+    public static String domainDropDown = "//div[@class='mat-select-value']";
+    public static String signUpForFreeBtn = "//button[text()='Sign up for a Free trial']";
+    public static String get100CallFreeTrielText= "//span[text()='Get 100 calls free on sign up']";
+    public static String alreadyAUserText = "//span[text()='Already a user? ']";
+    public static String errorMsgForOrgName = "//mat-error[normalize-space()='Please enter organization name']";
+    public static String errorMsgForFirstName = "//mat-error[normalize-space()='Please enter first name']";
+    public static String errorMsgForLastName = "//mat-error[normalize-space()='Please enter last name']";
+    public static String errorMsgForBusinessEmail = "//mat-error[normalize-space()='Please enter business email address']";
+    public static String errorMsgForPhone = "//mat-error[normalize-space()='Please enter phone number']";
+    public static String errorMsgForConfirmPassword = "//mat-error[normalize-space()='Please enter confirm password']";
+
 
     public static String SEARCH = "//input[@placeholder='Search...']";
     public static String FILTERS = "//button[@type='button']//span[normalize-space(.)='Filters']";
