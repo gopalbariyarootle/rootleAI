@@ -56,6 +56,8 @@ public class loginTest extends BasePage {
         loginPage.verifyAllTheElementsOnTheSignUpPage();
     }
 
+    //test
+
     @Test
     public void verifyValidationMessageForBlankInpOnSignUpPage(){
         common.logPrint("Verify that validation message for blank field on sign-up page");
