@@ -26,6 +26,7 @@ public class appCampaignsTest extends BasePage {
         loginPage.logoutFromAdmin();
         loginPage.loginToAppWithValidUserNamePassInAppUrl();
         common.openNewWindow();
+        common.logPrint("test");
         loginPage.loginToAppWithValidUserNamePassInAppUrl();
     }
 
