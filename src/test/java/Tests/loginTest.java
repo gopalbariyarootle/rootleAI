@@ -8,9 +8,15 @@ import org.testng.annotations.Test;
 public class loginTest extends BasePage {
 
     @Test
-    public void verifyLoginPageIsLoadsSuccessfully(){
+    public void verifyLoginPageIsLoadsSuccessfullyInAdmin(){
         common.logPrint("Verify login with valid credential");
         loginPage.loginToAppWithValidUserNamePass();
+    }
+
+    @Test
+    public void verifyLoginPageIsLoadsSuccessfullyInApp(){
+        common.logPrint("Verify login with valid credential");
+        loginPage.loginToAppWithValidUserNamePassInAppUrl();
     }
 
     @Test
@@ -63,7 +69,5 @@ public class loginTest extends BasePage {
         loginPage.clickOnTheSignUpForFreeButton();
         loginPage.verifyValidationMessageForSignUpBlankInputs();
     }
-
-
 
 }
