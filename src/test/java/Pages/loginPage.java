@@ -17,17 +17,34 @@ public class loginPage extends Locators {
 
     private String username;
     private String password;
+    private String appUrl;
+    private String appUsername;
+    private String appPassword;
 
     public loginPage(WebDriver driver) {
         super(driver);
         this.common = new Common(driver);
         this.username = EnvConfig.getDirectorUser();
         this.password = EnvConfig.getDirectorPass();
+        this.appUrl = EnvConfig.getAppUrl();
+        this.appUsername = EnvConfig.getAppEmail();
+        this.appPassword = EnvConfig.getAppPass();
     }
 
     public void clickOnLoginButton(){
         common.waitUntilElementToBeVisible(loginBtn);
         common.click(loginBtn);
+    }
+
+    public void logoutFromAdmin(){
+
+        common.waitUntilElementToBeVisible(profileMenu);
+        common.click(profileMenu);
+
+        common.waitUntilElementToBeVisible(logoutBtn);
+        common.click(logoutBtn);
+
+        common.logPrint("User successfully logout from the app");
     }
 
     public void clickOnForgotPasswordButton(){
@@ -60,6 +77,19 @@ public class loginPage extends Locators {
 
     public void assertPasswordError(){
         common.assertElementPresent(errorMsgForPassword);
+    }
+
+    public void loginToAppWithValidUserNamePassInAppUrl(){
+
+        driver.get(appUrl);
+
+        common.waitUntilElementToBeVisible(emailInpApp);
+        common.type(emailInpApp, appUsername);
+
+        common.waitUntilElementToBeVisible(passwordInpApp);
+        common.type(passwordInpApp, appPassword);
+
+        clickOnLoginButton();
     }
 
     public void loginToAppWithValidUserNamePass(){

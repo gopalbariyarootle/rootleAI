@@ -44,6 +44,7 @@ public class BasePage {
 
     // ================= PAGE OBJECTS =================
     public loginPage loginPage;
+    public appCampaigns appCampaigns;
 
     protected List<String> stringList = new ArrayList<>();
 
@@ -143,6 +144,7 @@ public class BasePage {
         getDriver().manage().window().maximize();
         common = new Common(getDriver());
         loginPage = new loginPage(getDriver());
+        appCampaigns = new appCampaigns(getDriver());
         steps.set(1);
         Common.printCurrentTime("Starting Time");
         getDriver().get(EnvConfig.getWebUrl());

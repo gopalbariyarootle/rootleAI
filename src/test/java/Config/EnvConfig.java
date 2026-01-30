@@ -45,6 +45,22 @@ public final class EnvConfig {
         return get("Admin_Pass");
     }
 
+    public static String getAppUrl() {
+        return get("App_URL");
+    }
+
+    public static String getAppEmail() {
+        return get("App_User");
+    }
+
+    public static String getAppPass() {
+        return get("App_Pass");
+    }
+
+    public static String getAppOrganization() {
+        return get("ORG_Name");
+    }
+
     public static String getForgotUser() {
         return get("FORGOT_USER");
     }
