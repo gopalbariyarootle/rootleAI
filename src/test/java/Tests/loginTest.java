@@ -8,21 +8,24 @@ import org.testng.annotations.Test;
 public class loginTest extends BasePage {
 
     @Test
-    public void verifyLoginPageIsLoadsSuccessfullyInAdmin(){
+    public void verifyLoginWithValidEmailAndPass(){
         common.logPrint("Verify login with valid credential");
         loginPage.loginToAppWithValidUserNamePass();
     }
 
     @Test
+    public void verifyValidationMessageForBlankEmailAndPassField(){
+        common.logPrint("Verify that the validation message is showing for the blank email and pass");
+        loginPage.verifyErrorMessageForBlankEmailPass();
+    }
+
+
+
+
+    @Test
     public void verifyLoginPageIsLoadsSuccessfullyInApp(){
         common.logPrint("Verify login with valid credential");
         loginPage.loginToAppWithValidUserNamePassInAppUrl();
-    }
-
-    @Test
-    public void verifyValidationMessageForEmailAndPassField(){
-        common.logPrint("Verify that the validation message is showing for the email and pass");
-        loginPage.verifyErrorMessageForBlankEmailPass();
     }
 
     @Test

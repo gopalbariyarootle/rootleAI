@@ -44,6 +44,12 @@ public class loginPage extends Locators {
         common.waitUntilElementToBeVisible(logoutBtn);
         common.click(logoutBtn);
 
+        common.logPrint("Step:: Verify login screen is displayed after the login");
+        common.waitUntilElementToBeVisible(emailInpApp);
+
+        driver.navigate().refresh();
+        common.pause(1);
+
         common.logPrint("User successfully logout from the app");
     }
 
