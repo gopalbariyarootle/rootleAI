@@ -77,7 +77,7 @@ public class Locators extends BasePage {
     public static String errorMsgForConfirmPassword = "//mat-error[normalize-space()='Please enter confirm password']";
 
     /*---------- App SignUp page Xpath ------------*/
-    public static String emailInpApp = "//input[@placeholder='Email Address']";
+    public static String emailInpApp = "//input[@placeholder='Email Address'] | //input[@placeholder='Enter Email Address']";
     public static String passwordInpApp = "//input[@placeholder='Password']";
 
     /*---------- App Campaigns page Xpath ------------*/
@@ -93,11 +93,11 @@ public class Locators extends BasePage {
     public static String descriptionInp = "//textarea[@placeholder='Enter Description' ]";
     public static String selectLanguageDropDown = "//mat-select[@placeholder='Select language']";
     public static String gujaratiOpt = "//span[text()=' Gujarati (India) ']";
-    public static String checkboxTemplate = "//mat-checkbox[@class='mat-checkbox mat-accent']";
 
     /*---------- Organization page Xpath ------------*/
     public static String organizationMenu = "//span[text()='Organizations']";
     public static String assignTemplateIconOnGride = "//mat-icon[@ng-reflect-message='Assign Templates']";
+
 
 
     public static String SEARCH = "//input[@placeholder='Search...']";

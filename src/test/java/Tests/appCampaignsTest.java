@@ -7,15 +7,17 @@ import org.testng.annotations.Test;
 public class appCampaignsTest extends BasePage {
 
     @Test
-    public void verifyValidationMessageForBlankInpOnSignUpPage(){
-       common.logPrint("Verify create campaign functionality is working");
-       loginPage.loginToAppWithValidUserNamePassInAppUrl();
-        appCampaigns.clickOnCampaignMenu();
+    public void verifyCreateTemplateFunctionality(){
+        common.logPrint("Verify create template functionality is working");
+        loginPage.loginToAppWithValidUserNamePass();
+        String templateName = appCampaigns.createNewTemplate();
+        appCampaigns.clickOnBAckBtn();
+        appCampaigns.verifyCreatedTemplateIsShowingInTheList(templateName);
     }
 
     @Test
     public void verifyAssignedTemplateIsShowingInApp(){
-        common.logPrint("Verify create campaign functionality is working");
+        common.logPrint("Verify created and assigned template is showing in the organization");
         loginPage.loginToAppWithValidUserNamePass();
         String templateName = appCampaigns.createNewTemplate();
         appCampaigns.clickOnBAckBtn();
@@ -24,12 +26,21 @@ public class appCampaignsTest extends BasePage {
         appCampaigns.searchOrganization();
         appCampaigns.assignTemplateToOrganization(templateName);
         loginPage.logoutFromAdmin();
-        loginPage.loginToAppWithValidUserNamePassInAppUrl();
         common.openNewWindow();
-        common.logPrint("test");
         loginPage.loginToAppWithValidUserNamePassInAppUrl();
+        appCampaigns.goTOCampaignPage();
+        appCampaigns.verifyTemplateIsShowingInTheDropdown(templateName);
+
     }
 
 
+
+
+    @Test
+    public void verifyValidationMessageForBlankInpOnSignUpPage(){
+       common.logPrint("Verify create campaign functionality is working");
+       loginPage.loginToAppWithValidUserNamePassInAppUrl();
+        appCampaigns.goTOCampaignPage();
+    }
 
 }

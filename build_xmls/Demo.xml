@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Demo Test Cases" verbose="10" parallel="tests" thread-count="3" allow-return-values="true">
+
+    <listeners>
+        <listener class-name="Utils.RetryListener"></listener>
+    </listeners>
+
+    <!-- Verify login with valid credential.-->
+    <test name="Verify login with valid credential">
+        <classes>
+            <class name="Tests.loginTest">
+                <methods>
+                    <include name="verifyLoginWithValidEmailAndPass"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Verify that the validation message is showing for the blank email and pass.-->
+    <test name="Verify that the validation message is showing for the blank email and pass">
+        <classes>
+            <class name="Tests.loginTest">
+                <methods>
+                    <include name="verifyValidationMessageForBlankEmailAndPassField"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Verify create template functionality is working.-->
+    <test name="Verify create template functionality is working">
+        <classes>
+            <class name="Tests.appCampaignsTest">
+                <methods>
+                    <include name="verifyCreateTemplateFunctionality"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Verify created and assigned template is showing in the organization.-->
+    <test name="Verify created and assigned template is showing in the organization">
+        <classes>
+            <class name="Tests.appCampaignsTest">
+                <methods>
+                    <include name="verifyAssignedTemplateIsShowingInApp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

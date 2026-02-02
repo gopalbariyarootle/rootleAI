@@ -150,8 +150,7 @@
                 <configuration>
                     <suiteXmlFiles>                  
                         <!--Gopal-->
-<!--                        <suiteXmlFile>build_xmls/SmokeSuite.xml</suiteXmlFile>-->
-                        <suiteXmlFile>build_xmls/Login.xml</suiteXmlFile>
+                        <suiteXmlFile>build_xmls/Demo.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <allure.results.directory>
