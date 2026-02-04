@@ -106,6 +106,10 @@ public class loginPage extends Locators {
         common.type(passInp, password);
 
         clickOnLoginButton();
+
+        common.assertElementPresent(dashboardMenu);
+
+        common.logPrint("Login successfully");
     }
 
     public void verifyErrorMessageForBlankEmailPass(){

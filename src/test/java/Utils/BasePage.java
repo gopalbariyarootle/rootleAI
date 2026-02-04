@@ -195,7 +195,7 @@ public class BasePage {
 //
         Common.printCurrentTime("Ending Time");
         getDriver().manage().deleteAllCookies();
-        //getDriver().quit();
+        getDriver().quit();
         driver.remove();
     }
 

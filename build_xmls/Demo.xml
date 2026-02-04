@@ -28,6 +28,39 @@
         </classes>
     </test>
 
+    <!-- Verify that all the elements are showing on the login page.-->
+    <test name="Verify that all the elements are showing on the login page">
+        <classes>
+            <class name="Tests.loginTest">
+                <methods>
+                    <include name="verifyAllElementsArePresentOnTheLoginPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Verify that validation message for forgot pass page email field.-->
+    <test name="Verify that validation message for forgot pass page email field">
+        <classes>
+            <class name="Tests.loginTest">
+                <methods>
+                    <include name="verifyValidationMessageForBlankForgotPassEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Verify that validation message for invalid email for forgot password.-->
+    <test name="Verify that validation message for invalid email for forgot password">
+        <classes>
+            <class name="Tests.loginTest">
+                <methods>
+                    <include name="verifyValidationMessageForInValidEmailAddressOnForgotPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
     <!-- Verify create template functionality is working.-->
     <test name="Verify create template functionality is working">
         <classes>

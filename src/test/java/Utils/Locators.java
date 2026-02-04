@@ -30,7 +30,7 @@ public class Locators extends BasePage {
     public static String emailInp = "//input[@placeholder='Enter Email Address']";
     public static String passInp = "//input[@placeholder='Enter Password']";
     public static String loginBtn = "//span[text()=' LOGIN '] | //span[contains(text(),' Log in ')]";
-    public static String errorMsgForEmail = "//mat-error[text()=' Please enter email address ']";
+    public static String errorMsgForEmail = "//mat-error[text()=' Please enter email Address ']";
     public static String errorMsgForPassword = "//mat-error[text()=' Please enter password ']";
     public static String errorMsgForInvalidEmail = "//mat-error[text()=' Please enter valid email address ']";
     public static String loginHeader = "//h3[text()='Login']";
@@ -75,6 +75,9 @@ public class Locators extends BasePage {
     public static String errorMsgForBusinessEmail = "//mat-error[normalize-space()='Please enter business email address']";
     public static String errorMsgForPhone = "//mat-error[normalize-space()='Please enter phone number']";
     public static String errorMsgForConfirmPassword = "//mat-error[normalize-space()='Please enter confirm password']";
+
+    /*---------- Admin Dashboard Xpath ------------*/
+    public static String dashboardMenu = "//span[text()='Dashboard']";
 
     /*---------- App SignUp page Xpath ------------*/
     public static String emailInpApp = "//input[@placeholder='Email Address'] | //input[@placeholder='Enter Email Address']";

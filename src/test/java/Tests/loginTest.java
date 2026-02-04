@@ -19,26 +19,10 @@ public class loginTest extends BasePage {
         loginPage.verifyErrorMessageForBlankEmailPass();
     }
 
-
-
-
-    @Test
-    public void verifyLoginPageIsLoadsSuccessfullyInApp(){
-        common.logPrint("Verify login with valid credential");
-        loginPage.loginToAppWithValidUserNamePassInAppUrl();
-    }
-
     @Test
     public void verifyAllElementsArePresentOnTheLoginPage(){
         common.logPrint("Verify that all the elements are showing on the login page");
         loginPage.verifyAllTheElementsOnTheLoginPage();
-    }
-
-    @Test
-    public void verifyAllElementsArePresentOnTheForgotPassword(){
-        common.logPrint("Verify that all the elements are showing on the forgot password page");
-        loginPage.clickOnForgotPasswordButton();
-        loginPage.verifyALlTheElementsOnForgotPassPage();
     }
 
     @Test
@@ -56,6 +40,24 @@ public class loginTest extends BasePage {
         loginPage.enterInvalidDataInEmail();
         loginPage.clickOnTheSubmitButton();
         loginPage.assertEmailErrorForInvalidEmail();
+    }
+
+
+
+
+
+
+    @Test
+    public void verifyLoginPageIsLoadsSuccessfullyInApp(){
+        common.logPrint("Verify login with valid credential");
+        loginPage.loginToAppWithValidUserNamePassInAppUrl();
+    }
+
+    @Test
+    public void verifyAllElementsArePresentOnTheForgotPassword(){
+        common.logPrint("Verify that all the elements are showing on the forgot password page");
+        loginPage.clickOnForgotPasswordButton();
+        loginPage.verifyALlTheElementsOnForgotPassPage();
     }
 
     @Test
